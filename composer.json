@@ -48,7 +48,7 @@
         "QCod\\Settings\\SettingsServiceProvider"
       ],
       "aliases": {
-        "Settings": "QCod\\Settings\\Facade"
+        "Setting": "QCod\\Settings\\Facade"
       }
     }
   },

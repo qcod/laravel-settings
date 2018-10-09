@@ -5,7 +5,7 @@
 [![Build Status](https://img.shields.io/travis/qcod/laravel-settings/master.svg)](https://travis-ci.org/qcod/laravel-settings)
 [![Total Downloads](https://img.shields.io/packagist/dt/qcod/laravel-settings.svg)](https://packagist.org/packages/qcod/laravel-settings)
 
-Use `qcod/laravel-settings` provides simple key value pair settings to store in database.
+Use `qcod/laravel-settings` to store key value pair settings in to database.
 
 > All the settings saved in db is cached to improve performance by reducing sql query to zero.
 
@@ -22,29 +22,27 @@ $ composer require qcod/laravel-settings
 ```php
 'providers' => [
     //...
-    QCod\Settings\AppSettingsServiceProvider::class
+    QCod\Settings\SettingsServiceProvider::class
 ]
 
 'aliases' => [
     //...
-    "Settings" => QCod\Settings\Facade::class
+    "Setting" => QCod\Settings\Facade::class
 ]
 ```
 
-In Laravel 5.5 or above the service provider automatically get registered and a facade `AppSettings::get('app_name')` will be available.
+In Laravel 5.5 or above the service provider automatically get registered and a facade `Setting::get('app_name')` will be available.
 
 **3** - Now run the migration by `php artisan migrate` to create the settings table.
 
 ### Getting Started
 
-Settings into db and don't want the UI to manage settings? for that simply use the helper function `setting()` or `AppSetting::get('app_name')` to store and retrieve settings from db. For this you don't need to define any section and inputs in `app_settings.php` config.
+You can use helper function `setting()` or `Setting::get('app_name')` to store and retrieve settings from db.
 
-> Make sure to set `'remove_abandoned_settings' => false` in **config/app_settings.php** otherwise any undefined input fields will be removed on save from UI.
-
-Here are list of available methods:
+### Available methods
 
 ```php
-// Pass `true` to ignore cached settings.
+// Pass `true` to ignore cached settings
 setting()->all($fresh = false);
 
 // Get a single setting
