@@ -3,6 +3,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/qcod/laravel-settings.svg)](https://packagist.org/packages/qcod/laravel-settings)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/qcod/laravel-settings/master.svg)](https://travis-ci.org/qcod/laravel-settings)
+[![StyleCI](https://styleci.io/repos/152258044/shield)](https://styleci.io/repos/152258044)
 [![Total Downloads](https://img.shields.io/packagist/dt/qcod/laravel-settings.svg)](https://packagist.org/packages/qcod/laravel-settings)
 
 Use `qcod/laravel-settings` to store key value pair settings in to database.
