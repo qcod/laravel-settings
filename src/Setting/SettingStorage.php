@@ -6,9 +6,8 @@ use Illuminate\Support\Collection;
 
 interface SettingStorage
 {
-
     /**
-     * Get all settings from storage as key value pair
+     * Get all settings from storage as key value pair.
      *
      * @param bool $fresh ignore cached
      * @return Collection
@@ -16,7 +15,7 @@ interface SettingStorage
     public function all($fresh = false);
 
     /**
-     * Get a setting from storage by key
+     * Get a setting from storage by key.
      *
      * @param string $key
      * @param null $default
@@ -26,7 +25,7 @@ interface SettingStorage
     public function get($key, $default = null, $fresh = false);
 
     /**
-     * Check if setting with key exists
+     * Check if setting with key exists.
      *
      * @param $key
      * @return bool
@@ -34,7 +33,7 @@ interface SettingStorage
     public function has($key);
 
     /**
-     * Save a setting in storage
+     * Save a setting in storage.
      *
      * @param $key string|array
      * @param $val string|mixed
@@ -43,7 +42,7 @@ interface SettingStorage
     public function set($key, $val = null);
 
     /**
-     * Remove a setting from storage
+     * Remove a setting from storage.
      *
      * @param $key
      * @return mixed
@@ -51,7 +50,7 @@ interface SettingStorage
     public function remove($key);
 
     /**
-     * Flush setting cache
+     * Flush setting cache.
      *
      * @return bool
      */

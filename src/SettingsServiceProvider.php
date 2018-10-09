@@ -14,7 +14,7 @@ class SettingsServiceProvider extends ServiceProvider
     public function boot()
     {
         // Load migration
-        $this->loadMigrationsFrom(__DIR__ . '/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/migrations');
     }
 
     /**
