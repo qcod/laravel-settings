@@ -7,14 +7,14 @@ use Illuminate\Support\Facades\Cache;
 class SettingEloquentStorage implements SettingStorage
 {
     /**
-     * Cache key
+     * Cache key.
      *
      * @var string
      */
     protected $settingsCacheKey = 'app_settings';
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function all($fresh = false)
     {
@@ -28,7 +28,7 @@ class SettingEloquentStorage implements SettingStorage
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function get($key, $default = null, $fresh = false)
     {
@@ -36,7 +36,7 @@ class SettingEloquentStorage implements SettingStorage
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function set($key, $val = null)
     {
@@ -59,7 +59,7 @@ class SettingEloquentStorage implements SettingStorage
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function has($key)
     {
@@ -67,7 +67,7 @@ class SettingEloquentStorage implements SettingStorage
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function remove($key)
     {
@@ -79,7 +79,7 @@ class SettingEloquentStorage implements SettingStorage
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function flushCache()
     {
@@ -87,7 +87,7 @@ class SettingEloquentStorage implements SettingStorage
     }
 
     /**
-     * Get settings eloquent model
+     * Get settings eloquent model.
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
