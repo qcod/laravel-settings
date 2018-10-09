@@ -1,4 +1,4 @@
-## Laravel App Settings
+## Laravel Settings
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/qcod/laravel-settings.svg)](https://packagist.org/packages/qcod/laravel-settings)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
@@ -38,7 +38,7 @@ In Laravel 5.5 or above the service provider automatically get registered and a 
 
 ### Getting Started
 
-You can use helper function `setting()` or `Setting::get('app_name')` to store and retrieve settings from db.
+You can use helper function `setting('app_name')` or `Setting::get('app_name')` to use laravel settings.
 
 ### Available methods
 
