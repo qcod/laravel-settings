@@ -144,4 +144,32 @@ class StorageTest extends TestCase
         $this->assertEquals('info@email.com', $this->settingStorage->get('app_email'));
         $this->assertEquals('SaaS', $this->settingStorage->get('app_type'));
     }
+
+    /**
+     * it can use helper function to set and get settings
+     *
+     * @test
+     */
+    public function it_can_use_helper_function_to_set_and_get_settings()
+    {
+        setting()->set('app_name', 'Cool App');
+
+        $this->assertEquals('Cool App', setting()->get('app_name'));
+
+        $this->assertDatabaseHas('settings', ['name' => 'app_name']);
+    }
+
+    /**
+     * it can access setting via facade
+     *
+     * @test
+     */
+    public function it_can_access_setting_via_facade()
+    {
+        \Setting::set('app_name', 'Cool App');
+
+        $this->assertEquals('Cool App', \Setting::get('app_name'));
+
+        $this->assertDatabaseHas('settings', ['name' => 'app_name']);
+    }
 }

@@ -35,7 +35,7 @@ abstract class TestCase extends OrchestraTestCase
     protected function getPackageAliases($app)
     {
         return [
-            'AppSettings' => 'QCod\Settings\Facade'
+            'Setting' => 'QCod\Settings\Facade'
         ];
     }
 

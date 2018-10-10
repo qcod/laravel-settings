@@ -9,6 +9,6 @@ class Facade extends \Illuminate\Support\Facades\Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'app-settings';
+        return 'QCod\Settings\Setting\SettingStorage';
     }
 }

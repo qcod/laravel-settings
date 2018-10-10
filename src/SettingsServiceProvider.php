@@ -27,7 +27,7 @@ class SettingsServiceProvider extends ServiceProvider
         // bind setting storage
         $this->app->bind(
             'QCod\Settings\Setting\SettingStorage',
-            '\QCod\Settings\Setting\SettingEloquentStorage'
+            'QCod\Settings\Setting\SettingEloquentStorage'
         );
     }
 }
