@@ -6,7 +6,7 @@
 [![StyleCI](https://styleci.io/repos/152258044/shield)](https://styleci.io/repos/152258044)
 [![Total Downloads](https://img.shields.io/packagist/dt/qcod/laravel-settings.svg)](https://packagist.org/packages/qcod/laravel-settings)
 
-Use `qcod/laravel-settings` to store key value pair settings in to database.
+Use `qcod/laravel-settings` to store key value pair settings in the database.
 
 > All the settings saved in db is cached to improve performance by reducing sql query to zero.
 
