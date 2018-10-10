@@ -152,9 +152,9 @@ class StorageTest extends TestCase
      */
     public function it_can_use_helper_function_to_set_and_get_settings()
     {
-        setting()->set('app_name', 'Cool App');
+        settings()->set('app_name', 'Cool App');
 
-        $this->assertEquals('Cool App', setting()->get('app_name'));
+        $this->assertEquals('Cool App', settings()->get('app_name'));
 
         $this->assertDatabaseHas('settings', ['name' => 'app_name']);
     }
@@ -166,9 +166,9 @@ class StorageTest extends TestCase
      */
     public function it_can_access_setting_via_facade()
     {
-        \Setting::set('app_name', 'Cool App');
+        \Settings::set('app_name', 'Cool App');
 
-        $this->assertEquals('Cool App', \Setting::get('app_name'));
+        $this->assertEquals('Cool App', \Settings::get('app_name'));
 
         $this->assertDatabaseHas('settings', ['name' => 'app_name']);
     }

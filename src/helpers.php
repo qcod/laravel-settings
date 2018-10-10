@@ -1,6 +1,6 @@
 <?php
 
-if (! function_exists('setting')) {
+if (! function_exists('settings')) {
 
     /**
      * Get app setting stored in db.
@@ -9,7 +9,7 @@ if (! function_exists('setting')) {
      * @param null $default
      * @return mixed
      */
-    function setting($key = null, $default = null)
+    function settings($key = null, $default = null)
     {
         if (is_null($key)) {
             return app()->make('QCod\Settings\Setting\SettingStorage');

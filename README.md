@@ -28,7 +28,7 @@ $ composer require qcod/laravel-settings
 
 'aliases' => [
     //...
-    "Setting" => QCod\Settings\Facade::class
+    "Settings" => QCod\Settings\Facade::class
 ]
 ```
 
@@ -38,32 +38,32 @@ In Laravel 5.5 or above the service provider automatically get registered and a 
 
 ### Getting Started
 
-You can use helper function `setting('app_name')` or `Setting::get('app_name')` to use laravel settings.
+You can use helper function `settings('app_name')` or `Settings::get('app_name')` to use laravel settings.
 
 ### Available methods
 
 ```php
 // Pass `true` to ignore cached settings
-setting()->all($fresh = false);
+settings()->all($fresh = false);
 
 // Get a single setting
-setting()->get($key, $defautl = null);
+settings()->get($key, $defautl = null);
 
 // Set a single setting
-setting()->set($key, $value);
+settings()->set($key, $value);
 
 // Set a multiple settings
-setting()->set([
+settings()->set([
    'app_name' => 'QCode',
    'app_email' => 'info@email.com',
    'app_type' => 'SaaS'
 ]);
 
 // check for setting key
-setting()->has($key);
+settings()->has($key);
 
 // remove a setting
-setting()->remove($key);
+settings()->remove($key);
 ```
 
 ### Changelog
