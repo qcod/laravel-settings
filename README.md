@@ -36,6 +36,12 @@ In Laravel 5.5 or above the service provider automatically get registered and a 
 
 **3** - Now run the migration by `php artisan migrate` to create the settings table.
 
+Optionally you can publish migration by running
+
+```
+php artisan vendor:publish --provider="QCod\Settings\SettingsServiceProvider" --tag="migrations"
+```
+
 ### Getting Started
 
 You can use helper function `settings('app_name')` or `Settings::get('app_name')` to use laravel settings.
