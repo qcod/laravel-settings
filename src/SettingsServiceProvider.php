@@ -15,6 +15,11 @@ class SettingsServiceProvider extends ServiceProvider
     {
         // Load migration
         $this->loadMigrationsFrom(__DIR__.'/migrations');
+
+        // publish migration
+        $this->publishes([
+            __DIR__ . '/migrations/2014_10_00_000000_create_settings_table.php' => database_path("/migrations/2014_10_00_000000_create_settings_table")
+        ], 'migrations');
     }
 
     /**
