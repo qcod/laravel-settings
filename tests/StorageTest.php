@@ -15,7 +15,7 @@ class StorageTest extends TestCase
      */
     protected $settingStorage;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
