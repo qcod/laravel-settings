@@ -3,9 +3,17 @@
 namespace QCod\Settings\Setting;
 
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Database\Eloquent\Builder;
 
 class SettingEloquentStorage implements SettingStorage
 {
+    /**
+     * Group name.
+     *
+     * @var string
+     */
+    protected $settingsGroupName = 'default';
+
     /**
      * Cache key.
      *
@@ -19,11 +27,11 @@ class SettingEloquentStorage implements SettingStorage
     public function all($fresh = false)
     {
         if ($fresh) {
-            return $this->getSettingModel()->pluck('val', 'name');
+            return $this->modelQuery()->pluck('val', 'name');
         }
 
-        return Cache::rememberForever($this->settingsCacheKey, function () {
-            return $this->getSettingModel()->pluck('val', 'name');
+        return Cache::rememberForever($this->getSettingsCacheKey(), function () {
+            return $this->modelQuery()->pluck('val', 'name');
         });
     }
 
@@ -49,8 +57,13 @@ class SettingEloquentStorage implements SettingStorage
             return true;
         }
 
-        $setting = $this->getSettingModel()->firstOrNew(['name' => $key]);
+        $setting = $this->getSettingModel()->firstOrNew([
+            'name' => $key,
+            'group' => $this->settingsGroupName,
+        ]);
+
         $setting->val = $val;
+        $setting->group = $this->settingsGroupName;
         $setting->save();
 
         $this->flushCache();
@@ -83,16 +96,49 @@ class SettingEloquentStorage implements SettingStorage
      */
     public function flushCache()
     {
-        return Cache::forget($this->settingsCacheKey);
+        return Cache::forget($this->getSettingsCacheKey());
+    }
+
+    /**
+     * Get settings cache key.
+     *
+     * @return string
+     */
+    protected function getSettingsCacheKey()
+    {
+        return $this->settingsCacheKey.'.'.$this->settingsGroupName;
     }
 
     /**
      * Get settings eloquent model.
      *
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return Builder
      */
     protected function getSettingModel()
     {
         return app('\QCod\Settings\Setting\Setting');
+    }
+
+    /**
+     * Get the model query builder.
+     *
+     * @return Builder
+     */
+    protected function modelQuery()
+    {
+        return $this->getSettingModel()->group($this->settingsGroupName);
+    }
+
+    /**
+     * Set the group name for settings.
+     *
+     * @param string $groupName
+     * @return $this
+     */
+    public function group($groupName)
+    {
+        $this->settingsGroupName = $groupName;
+
+        return $this;
     }
 }

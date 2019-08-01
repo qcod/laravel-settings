@@ -3,6 +3,7 @@
 namespace QCod\Settings\Tests\Feature;
 
 use QCod\Settings\Tests\TestCase;
+use QCod\Settings\Setting\Setting;
 use QCod\Settings\Setting\SettingEloquentStorage;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -171,5 +172,94 @@ class StorageTest extends TestCase
         $this->assertEquals('Cool App', \Settings::get('app_name'));
 
         $this->assertDatabaseHas('settings', ['name' => 'app_name']);
+    }
+
+    /**
+     * it has a default group name for settings
+     *
+     * @test
+     */
+    public function it_has_a_default_group_name_for_settings()
+    {
+        settings()->set('app_name', 'Cool App');
+
+        $this->assertDatabaseHas('settings', [
+            'name' => 'app_name',
+            'val' => 'Cool App',
+            'group' => 'default'
+        ]);
+    }
+
+    /**
+     * it can store setting with a group name
+     *
+     * @test
+     */
+    public function it_can_store_setting_with_a_group_name()
+    {
+        settings()->group('set1')->set('app_name', 'Cool App');
+
+        $this->assertDatabaseHas('settings', [
+            'name' => 'app_name',
+            'val' => 'Cool App',
+            'group' => 'set1'
+        ]);
+    }
+
+    /**
+     * it can get setting from a group
+     *
+     * @test
+     */
+    public function it_can_get_setting_from_a_group()
+    {
+        settings()->group('set1')->set('app_name', 'Cool App');
+
+        $this->assertTrue(settings()->group('set1')->has('app_name'));
+        $this->assertEquals('Cool App', settings()->group('set1')->get('app_name'));
+        $this->assertFalse(settings()->group('set2')->has('app_name'));
+    }
+
+    /**
+     * it give you all settings from default group if you dont specify one
+     *
+     * @test
+     */
+    public function it_give_you_all_settings_from_default_group_if_you_dont_specify_one()
+    {
+        settings()->set('app_name', 'Cool App 1');
+        settings()->set('app_name', 'Cool App 2');
+
+        $this->assertCount(1, settings()->all(true));
+        $this->assertCount(0, settings()->group('unknown')->all(true));
+    }
+
+    /**
+     * it allows same key to be used in different groups
+     *
+     * @test
+     */
+    public function it_allows_same_key_to_be_used_in_different_groups()
+    {
+        settings()->group('team1')->set('app_name', 'Cool App 1');
+        settings()->group('team2')->set('app_name', 'Cool App 2');
+
+        $this->assertCount(2, Setting::all());
+        $this->assertEquals('Cool App 1', settings()->group('team1')->get('app_name'));
+        $this->assertEquals('Cool App 2', settings()->group('team2')->get('app_name'));
+    }
+
+    /**
+     * it get group settings using facade
+     *
+     * @test
+     */
+    public function it_get_group_settings_using_facade()
+    {
+        \Settings::group('team1')->set('app_name', 'Cool App');
+
+        $this->assertEquals('Cool App', \Settings::group('team1')->get('app_name'));
+
+        $this->assertDatabaseHas('settings', ['name' => 'app_name', 'group' => 'team1']);
     }
 }
