@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 class SettingEloquentStorage implements SettingStorage
 {
     /**
-     * Group name
+     * Group name.
      *
      * @var string
      */
@@ -59,7 +59,7 @@ class SettingEloquentStorage implements SettingStorage
 
         $setting = $this->getSettingModel()->firstOrNew([
             'name' => $key,
-            'group' => $this->settingsGroupName
+            'group' => $this->settingsGroupName,
         ]);
 
         $setting->val = $val;
@@ -100,13 +100,13 @@ class SettingEloquentStorage implements SettingStorage
     }
 
     /**
-     * Get settings cache key
+     * Get settings cache key.
      *
      * @return string
      */
     protected function getSettingsCacheKey()
     {
-        return $this->settingsCacheKey . '.' . $this->settingsGroupName;
+        return $this->settingsCacheKey.'.'.$this->settingsGroupName;
     }
 
     /**
@@ -120,7 +120,7 @@ class SettingEloquentStorage implements SettingStorage
     }
 
     /**
-     * Get the model query builder
+     * Get the model query builder.
      *
      * @return Builder
      */
@@ -130,7 +130,7 @@ class SettingEloquentStorage implements SettingStorage
     }
 
     /**
-     * Set the group name for settings
+     * Set the group name for settings.
      *
      * @param string $groupName
      * @return $this
