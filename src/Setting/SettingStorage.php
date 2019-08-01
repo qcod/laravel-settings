@@ -57,7 +57,7 @@ interface SettingStorage
     public function flushCache();
 
     /**
-     * Set the group name for settings
+     * Set the group name for settings.
      *
      * @param string $groupName
      * @return $this
