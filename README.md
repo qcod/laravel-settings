@@ -72,6 +72,28 @@ settings()->has($key);
 settings()->remove($key);
 ```
 
+### Groups
+
+From `v 1.0.6` You can organize your settings into groups. If you skip the group name it will store settings with `default` group name.
+
+> If you are updating from previous version dont forget to run the migration
+
+You have all above methods available just set you working group by calling `->group('group_name')` method and chain on:
+
+```php
+settings()->group('team.1')->set('app_name', 'My Team App');
+settings()->group('team.1')->get('app_name');
+> My Team App
+
+settings()->group('team.2')->set('app_name', 'My Team 2 App');
+settings()->group('team.2')->get('app_name');
+> My Team 2 App
+
+// You can use facade
+\Settings::group('team.1')->get('app_name')
+> My Team App
+```
+
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
