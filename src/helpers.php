@@ -11,14 +11,16 @@ if (! function_exists('settings')) {
      */
     function settings($key = null, $default = null)
     {
+        $setting = app()->make('QCod\Settings\Setting\SettingStorage');
+
         if (is_null($key)) {
-            return app()->make('QCod\Settings\Setting\SettingStorage');
+            return $setting;
         }
 
         if (is_array($key)) {
-            return app()->make('QCod\Settings\Setting\SettingStorage')->set($key);
+            return $setting->set($key);
         }
 
-        return app()->make('QCod\Settings\Setting\SettingStorage')->get($key, value($default));
+        return $setting->get($key, value($default));
     }
 }
