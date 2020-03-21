@@ -1,7 +1,7 @@
 {
-  "name": "victoralagwu/laravel-settings",
-  "description": "Store key value pair in database as settings, (Just a little fix, the main author is qcod)",
-  "homepage": "https://github.com/victoralagwu/laravel-settings",
+  "name": "qcod/laravel-settings",
+  "description": "Store key value pair in database as settings",
+  "homepage": "https://github.com/qcod/laravel-settings",
   "type": "library",
   "license": "MIT",
   "keywords": [
