@@ -2,8 +2,8 @@
 
 namespace QCod\Settings\Setting;
 
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Cache;
 
 class SettingEloquentStorage implements SettingStorage
 {
