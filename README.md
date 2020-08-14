@@ -53,13 +53,23 @@ You can use helper function `settings('app_name')` or `Settings::get('app_name')
 settings()->all($fresh = false);
 
 // Get a single setting
-settings()->get($key, $defautl = null);
+settings()->get($key, $default = null);
+
+// Alternatively get a single setting as
+settings($key, $default = null);
 
 // Set a single setting
 settings()->set($key, $value);
 
-// Set a multiple settings
+// Set multiple settings
 settings()->set([
+   'app_name' => 'QCode',
+   'app_email' => 'info@email.com',
+   'app_type' => 'SaaS'
+]);
+
+// Alernatively set multiple settings as
+settings([
    'app_name' => 'QCode',
    'app_email' => 'info@email.com',
    'app_type' => 'SaaS'
