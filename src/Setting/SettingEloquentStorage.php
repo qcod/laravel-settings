@@ -22,17 +22,22 @@ class SettingEloquentStorage implements SettingStorage
     protected $settingsCacheKey = 'app_settings';
 
     /**
+     * Fields to select
+     *
+     * @var array
+     */
+    protected $selectionFields = ['val', 'name'];
+
+    /**
      * {@inheritdoc}
      */
     public function all($fresh = false)
     {
-        if ($fresh) {
-            return $this->modelQuery()->pluck('val', 'name');
-        }
-
-        return Cache::rememberForever($this->getSettingsCacheKey(), function () {
-            return $this->modelQuery()->pluck('val', 'name');
-        });
+        return $fresh
+            ? $this->fullQuery()
+            :  Cache::rememberForever($this->getSettingsCacheKey(), function () {
+                return $this->fullQuery();
+            });
     }
 
     /**
@@ -106,7 +111,7 @@ class SettingEloquentStorage implements SettingStorage
      */
     protected function getSettingsCacheKey()
     {
-        return $this->settingsCacheKey.'.'.$this->settingsGroupName;
+        return $this->settingsCacheKey . '.' . $this->settingsGroupName;
     }
 
     /**
@@ -140,5 +145,25 @@ class SettingEloquentStorage implements SettingStorage
         $this->settingsGroupName = $groupName;
 
         return $this;
+    }
+
+    /**
+     * Get the query
+     *
+     * @return Builder
+     */
+    public function fullQuery()
+    {
+        return $this->modelQuery()->pluck($this->getSelectionFields());
+    }
+
+    /**
+     * Get the to be selected
+     *
+     * @return array
+     */
+    public function getSelectionFields()
+    {
+        return $this->selectionFields;
     }
 }
