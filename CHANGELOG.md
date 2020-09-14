@@ -2,7 +2,7 @@
 
 All notable changes to `qcod/laravel-settings` will be documented in this file
 
-## 1.0.3 - 2020-09-24
+## 1.0.9 - 2020-09-24
 - Laravel 8 support
 
 ## 1.0.8 - 2020-03-22
