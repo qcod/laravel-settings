@@ -53,7 +53,7 @@ You can use helper function `settings('app_name')` or `Settings::get('app_name')
 settings()->all($fresh = false);
 
 // Get a single setting
-settings()->get($key, $defautl = null);
+settings()->get($key, $default = null);
 
 // Set a single setting
 settings()->set($key, $value);
