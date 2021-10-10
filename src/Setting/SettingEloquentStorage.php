@@ -132,7 +132,7 @@ class SettingEloquentStorage implements SettingStorage
     /**
      * Set the group name for settings.
      *
-     * @param string $groupName
+     * @param  string  $groupName
      * @return $this
      */
     public function group($groupName)
