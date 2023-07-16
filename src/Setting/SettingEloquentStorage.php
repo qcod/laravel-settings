@@ -40,7 +40,19 @@ class SettingEloquentStorage implements SettingStorage
      */
     public function get($key, $default = null, $fresh = false)
     {
-        return $this->all($fresh)->get($key, $default);
+        $configValue = $this->all($fresh)->get($key, $default);
+
+        if (config('app_settings.allow_passthrough_config')) {
+            if (!$configValue) {
+                $configValue = config($key);
+                if (config('app_settings.exception_on_nodefined_config')) {
+                    if (is_null($configValue)) {
+                        throw new \Exception('Missing config value for ' . $key);
+                    }
+                }
+            }
+        }
+        return $configValue ;
     }
 
     /**
