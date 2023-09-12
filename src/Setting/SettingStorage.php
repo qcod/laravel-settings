@@ -63,4 +63,13 @@ interface SettingStorage
      * @return $this
      */
     public function group($groupName);
+
+    /**
+     * Get a setting from group default by multiple keys
+     * its ignore cached by default
+     *
+     * @param  $name  list key
+     * @return mixed
+     */
+    public function only(...$key);
 }
