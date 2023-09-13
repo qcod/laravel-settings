@@ -262,4 +262,47 @@ class StorageTest extends TestCase
 
         $this->assertDatabaseHas('settings', ['name' => 'app_name', 'group' => 'team1']);
     }
+
+    /**
+     * it get setting by multiple value
+     *
+     * @test
+     */
+    public function it_get_setting_by_multiple_value()
+    {
+        settings()->set('app_name', 'Only Test');
+        settings()->set('app_version', 'v1.2.0');
+
+        $getOnly = settings()->only('app_name', 'app_version', 'app_flag');
+
+        $this->assertCount(3, $getOnly );
+        $this->assertTrue(array_key_exists("app_name", $getOnly));
+        $this->assertTrue(array_key_exists("app_version", $getOnly));
+        $this->assertTrue(array_key_exists("app_flag", $getOnly));
+        $this->assertSame("Only Test", $getOnly["app_name"]);
+        $this->assertSame("v1.2.0", $getOnly["app_version"]);
+        $this->assertNull($getOnly["app_flag"]);
+    }
+
+    /**
+     * it get setting by multiple value used group
+     *
+     * @test
+     */
+    public function it_get_setting_by_multiple_value_used_group()
+    {
+        settings()->set('app_name', 'Only Test');
+        settings()->group("version")->set('app_version', 'v1.2.0');
+
+        $getOnlyGroupVersion = settings()->group("version")->only('app_name', 'app_version', 'app_flag');
+
+        $this->assertCount(3, $getOnlyGroupVersion );
+        $this->assertTrue(array_key_exists("app_name", $getOnlyGroupVersion));
+        $this->assertTrue(array_key_exists("app_version", $getOnlyGroupVersion));
+        $this->assertTrue(array_key_exists("app_flag", $getOnlyGroupVersion));
+
+        $this->assertNull($getOnlyGroupVersion["app_name"]);
+        $this->assertSame("v1.2.0", $getOnlyGroupVersion["app_version"]);
+        $this->assertNull($getOnlyGroupVersion["app_flag"]);
+    }
 }

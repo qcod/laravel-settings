@@ -141,4 +141,19 @@ class SettingEloquentStorage implements SettingStorage
 
         return $this;
     }
+
+    /**
+    * {@inheritdoc}
+    */
+    public function only(...$key)
+    {
+
+        $_result = [];
+
+        foreach ($key as $value) {
+            $_result[$value] = $this->all(false)->get($value, null);
+        }
+
+        return $_result;
+    }
 }

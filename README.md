@@ -68,6 +68,10 @@ settings()->set([
 // check for setting key
 settings()->has($key);
 
+// get a setting from group default by multiple keys
+// its ignore cached by default
+settings()->only('key-1', 'key-2');
+
 // remove a setting
 settings()->remove($key);
 ```
@@ -86,8 +90,14 @@ settings()->group('team.1')->get('app_name');
 > My Team App
 
 settings()->group('team.2')->set('app_name', 'My Team 2 App');
-settings()->group('team.2')->get('app_name');
+settings()->group('team.2')->set('app_version', 'v1.2.0');
+settings()->group('team.2')->set('app_url', 'http://example.com');
+
+settings()->group('team.2')->get('app_url');
 > My Team 2 App
+
+settings()->group('team.2')->only('app_url', 'app_version');
+> ['app_url' => 'http://example.com', 'app_version' => 'v1.2.0']
 
 // You can use facade
 \Settings::group('team.1')->get('app_name')

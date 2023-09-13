@@ -27,25 +27,25 @@ interface SettingStorage
     /**
      * Check if setting with key exists.
      *
-     * @param $key
-     * @return bool
+     * @param   $key
+     * @return  bool
      */
     public function has($key);
 
     /**
      * Save a setting in storage.
      *
-     * @param $key string|array
-     * @param $val string|mixed
-     * @return mixed
+     * @param   $key string|array
+     * @param   $val string|mixed
+     * @return  mixed
      */
     public function set($key, $val = null);
 
     /**
      * Remove a setting from storage.
      *
-     * @param $key
-     * @return mixed
+     * @param   $key
+     * @return  mixed
      */
     public function remove($key);
 
@@ -63,4 +63,13 @@ interface SettingStorage
      * @return $this
      */
     public function group($groupName);
+
+    /**
+     * Get a setting from group default by multiple keys
+     * its ignore cached by default.
+     *
+     * @param  $name  list key
+     * @return mixed
+     */
+    public function only(...$key);
 }
