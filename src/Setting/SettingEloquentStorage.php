@@ -145,8 +145,8 @@ class SettingEloquentStorage implements SettingStorage
     /**
     * {@inheritdoc}
     */
-
-    public function only(...$key) {
+    public function only(...$key)
+    {
 
         $_result = [];
 
