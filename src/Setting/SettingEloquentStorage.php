@@ -40,7 +40,7 @@ class SettingEloquentStorage implements SettingStorage
      */
     public function get($key, $default = null, $fresh = false)
     {
-        return $this->all($fresh)->get($key, $default);
+        return $this->all($fresh)->get($key, $default) ?? $default;
     }
 
     /**
