@@ -11,8 +11,7 @@
 >
     <testsuites>
         <testsuite name="Package Test Suite">
-            <directory suffix=".php">./tests/</directory>
-            <exclude>./tests/TestCase.php</exclude>
+            <directory suffix="Test.php">./tests/</directory>
         </testsuite>
     </testsuites>
 
