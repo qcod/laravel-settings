@@ -1,1 +1,58 @@
-ewogICJuYW1lIjogInFjb2QvbGFyYXZlbC1zZXR0aW5ncyIsCiAgImRlc2NyaXB0aW9uIjogIlN0b3JlIGtleSB2YWx1ZSBwYWlyIGluIGRhdGFiYXNlIGFzIHNldHRpbmdzIiwKICAiaG9tZXBhZ2UiOiAiaHR0cHM6Ly9naXRodWIuY29tL3Fjb2QvbGFyYXZlbC1zZXR0aW5ncyIsCiAgInR5cGUiOiAibGlicmFyeSIsCiAgImxpY2Vuc2UiOiAiTUlUIiwKICAia2V5d29yZHMiOiBbCiAgICAicWNvZCIsCiAgICAibGFyYXZlbCIsCiAgICAiZGF0YWJhc2Ugc2V0dGluZ3MiLAogICAgImRiIHNldHRpbmdzIiwKICAgICJlbG9xdWVudCIKICBdLAogICJhdXRob3JzIjogWwogICAgewogICAgICAibmFtZSI6ICJNb2hkIFNhcXVlaWIgQW5zYXJpIiwKICAgICAgImVtYWlsIjogInNhcXVpYndlYkBnbWFpbC5jb20iCiAgICB9CiAgXSwKICAicmVxdWlyZSI6IHsKICAgICJwaHAiOiAiXjcuM3xeOC4wfF44LjF8XjguMnxeOC4zIiwKICAgICJsYXJhdmVsL2ZyYW1ld29yayI6ICJeNi4wfF43LjB8XjguMHxeOS4wfF4xMC4wfF4xMS4wfF4xMi4wfF4xMy4wIgogIH0sCiAgInJlcXVpcmUtZGV2IjogewogICAgIm9yY2hlc3RyYS90ZXN0YmVuY2giOiAiNC4qfDUuKnw2Lip8XjguMHxeOS4wfF4xMC4wfF4xMS4wIiwKICAgICJtb2NrZXJ5L21vY2tlcnkiOiAiXjAuOS40IHx8IH4xLjAiLAogICAgInBocHVuaXQvcGhwdW5pdCI6ICJeOC41fF45LjUuMTB8XjEwLjV8XjExLjB8XjEyLjAiCiAgfSwKICAiYXV0b2xvYWQiOiB7CiAgICAiY2xhc3NtYXAiOiBbCiAgICAgICJzcmMvbWlncmF0aW9ucyIKICAgIF0sCiAgICAicHNyLTQiOiB7CiAgICAgICJRQ29kXFxTZXR0aW5nc1xcIjogInNyYy8iCiAgICB9LAogICAgImZpbGVzIjogWwogICAgICAic3JjL2hlbHBlcnMucGhwIgogICAgXQogIH0sCiAgImF1dG9sb2FkLWRldiI6IHsKICAgICJwc3ItNCI6IHsKICAgICAgIlFDb2RcXFNldHRpbmdzXFxUZXN0c1xcIjogInRlc3RzLyIKICAgIH0KICB9LAogICJleHRyYSI6IHsKICAgICJsYXJhdmVsIjogewogICAgICAicHJvdmlkZXJzIjogWwogICAgICAgICJRQ29kXFxTZXR0aW5nc1xcU2V0dGluZ3NTZXJ2aWNlUHJvdmlkZXIiCiAgICAgIF0sCiAgICAgICJhbGlhc2VzIjogewogICAgICAgICJTZXR0aW5ncyI6ICJRQ29kXFxTZXR0aW5nc1xcRmFjYWRlIgogICAgICB9CiAgICB9CiAgfSwKICAic2NyaXB0cyI6IHsKICAgICJ0ZXN0IjogInZlbmRvci9iaW4vcGhwdW5pdCIKICB9Cn0K
+{
+  "name": "qcod/laravel-settings",
+  "description": "Store key value pair in database as settings",
+  "homepage": "https://github.com/qcod/laravel-settings",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "qcod",
+    "laravel",
+    "database settings",
+    "db settings",
+    "eloquent"
+  ],
+  "authors": [
+    {
+      "name": "Mohd Saqueib Ansari",
+      "email": "saquibweb@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.3|^8.0|^8.1|^8.2|^8.3",
+    "laravel/framework": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0|^13.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "4.*|5.*|6.*|^8.0|^9.0|^10.0|^11.0",
+    "mockery/mockery": "^0.9.4 || ~1.0",
+    "phpunit/phpunit": "^8.5|^9.5.10|^10.5|^11.0|^12.0"
+  },
+  "autoload": {
+    "classmap": [
+      "src/migrations"
+    ],
+    "psr-4": {
+      "QCod\\Settings\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "QCod\\Settings\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "QCod\\Settings\\SettingsServiceProvider"
+      ],
+      "aliases": {
+        "Settings": "QCod\\Settings\\Facade"
+      }
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  }
+}
