@@ -1,1 +1,37 @@
-bmFtZTogVGVzdHMKCm9uOgogIHB1c2g6CiAgcHVsbF9yZXF1ZXN0OgoKam9iczoKICB0ZXN0OgogICAgcnVucy1vbjogdWJ1bnR1LWxhdGVzdAogICAgc3RyYXRlZ3k6CiAgICAgIGZhaWwtZmFzdDogZmFsc2UKICAgICAgbWF0cml4OgogICAgICAgIGluY2x1ZGU6CiAgICAgICAgICAtIHBocDogJzguMicKICAgICAgICAgICAgbGFyYXZlbDogJzExLionCiAgICAgICAgICAgIHRlc3RiZW5jaDogJzkuKicKICAgICAgICAgIC0gcGhwOiAnOC4zJwogICAgICAgICAgICBsYXJhdmVsOiAnMTIuKicKICAgICAgICAgICAgdGVzdGJlbmNoOiAnMTAuKicKICAgICAgICAgIC0gcGhwOiAnOC4zJwogICAgICAgICAgICBsYXJhdmVsOiAnMTMuKicKICAgICAgICAgICAgdGVzdGJlbmNoOiAnMTEuKicKICAgICAgICAgIC0gcGhwOiAnOC40JwogICAgICAgICAgICBsYXJhdmVsOiAnMTMuKicKICAgICAgICAgICAgdGVzdGJlbmNoOiAnMTEuKicKCiAgICBuYW1lOiBQSFAgJHt7IG1hdHJpeC5waHAgfX0gLyBMYXJhdmVsICR7eyBtYXRyaXgubGFyYXZlbCB9fQoKICAgIHN0ZXBzOgogICAgICAtIHVzZXM6IGFjdGlvbnMvY2hlY2tvdXRAdjQKICAgICAgLSB1c2VzOiBzaGl2YW1tYXRodXIvc2V0dXAtcGhwQHYyCiAgICAgICAgd2l0aDoKICAgICAgICAgIHBocC12ZXJzaW9uOiAke3sgbWF0cml4LnBocCB9fQogICAgICAgICAgY292ZXJhZ2U6IG5vbmUKICAgICAgLSBydW46IGNvbXBvc2VyIHJlcXVpcmUgImxhcmF2ZWwvZnJhbWV3b3JrOiR7eyBtYXRyaXgubGFyYXZlbCB9fSIgIm9yY2hlc3RyYS90ZXN0YmVuY2g6JHt7IG1hdHJpeC50ZXN0YmVuY2ggfX0iIC0tbm8taW50ZXJhY3Rpb24gLS1uby11cGRhdGUKICAgICAgLSBydW46IGNvbXBvc2VyIHVwZGF0ZSAtLXByZWZlci1kaXN0IC0tbm8taW50ZXJhY3Rpb24KICAgICAgLSBydW46IGNvbXBvc2VyIHRlc3QK
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - php: '8.2'
+            laravel: '11.*'
+            testbench: '9.*'
+          - php: '8.3'
+            laravel: '12.*'
+            testbench: '10.*'
+          - php: '8.3'
+            laravel: '13.*'
+            testbench: '11.*'
+          - php: '8.4'
+            laravel: '13.*'
+            testbench: '11.*'
+
+    name: PHP ${{ matrix.php }} / Laravel ${{ matrix.laravel }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+      - run: composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
+      - run: composer update --prefer-dist --no-interaction
+      - run: composer test
