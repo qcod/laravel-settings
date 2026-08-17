@@ -1,1 +1,250 @@
-PD9waHAKCm5hbWVzcGFjZSBRQ29kXFNldHRpbmdzXFRlc3RzXEZlYXR1cmU7Cgp1c2UgUUNvZFxTZXR0aW5nc1xUZXN0c1xUZXN0Q2FzZTsKdXNlIFFDb2RcU2V0dGluZ3NcU2V0dGluZ1xTZXR0aW5nOwp1c2UgUUNvZFxTZXR0aW5nc1xTZXR0aW5nXFNldHRpbmdFbG9xdWVudFN0b3JhZ2U7CnVzZSBJbGx1bWluYXRlXEZvdW5kYXRpb25cVGVzdGluZ1xSZWZyZXNoRGF0YWJhc2U7CgpjbGFzcyBTdG9yYWdlVGVzdCBleHRlbmRzIFRlc3RDYXNlCnsKICAgIHVzZSBSZWZyZXNoRGF0YWJhc2U7CgogICAgLyoqCiAgICAgKiBAdmFyIFNldHRpbmdFbG9xdWVudFN0b3JhZ2UKICAgICAqLwogICAgcHJvdGVjdGVkICRzZXR0aW5nU3RvcmFnZTsKCiAgICBwcm90ZWN0ZWQgZnVuY3Rpb24gc2V0VXAoKTogdm9pZAogICAgewogICAgICAgIHBhcmVudDo6c2V0VXAoKTsKCiAgICAgICAgJHRoaXMtPnNldHRpbmdTdG9yYWdlID0gbmV3IFNldHRpbmdFbG9xdWVudFN0b3JhZ2UoKTsKICAgIH0KCiAgICAvKioKICAgICAqIGl0IHNldHMgYSBuZXcga2V5IHZhbHVlIGluIHN0b3JlCiAgICAgKgogICAgICovCiAgICBwdWJsaWMgZnVuY3Rpb24gdGVzdF9pdF9zZXRzX2FfbmV3X2tleV92YWx1ZV9pbl9zdG9yZSgpCiAgICB7CiAgICAgICAgJHRoaXMtPmFzc2VydERhdGFiYXNlTWlzc2luZygnc2V0dGluZ3MnLCBbJ2FwcF9uYW1lJyA9PiAnUUNvZGUnXSk7CgogICAgICAgICR0aGlzLT5zZXR0aW5nU3RvcmFnZS0+c2V0KCdhcHBfbmFtZScsICdRQ29kZScpOwoKICAgICAgICAkdGhpcy0+YXNzZXJ0RGF0YWJhc2VIYXMoJ3NldHRpbmdzJywgWyduYW1lJyA9PiAnYXBwX25hbWUnLCAndmFsJyA9PiAnUUNvZGUnXSk7CiAgICB9CgogICAgLyoqCiAgICAgKiBpdCBkb250IHNldCBpZiBzYW1lIGtleSB2YWx1ZSBwYWlyIGV4aXN0cyBpbiBzdG9yZQogICAgICoKICAgICAqLwogICAgcHVibGljIGZ1bmN0aW9uIHRlc3RfaXRfZG9udF9zZXRfaWZfc2FtZV9rZXlfdmFsdWVfcGFpcl9leGlzdHNfaW5fc3RvcmUoKQogICAgewogICAgICAgICR0aGlzLT5hc3NlcnREYXRhYmFzZU1pc3NpbmcoJ3NldHRpbmdzJywgWydhcHBfbmFtZScgPT4gJ1FDb2RlJ10pOwoKICAgICAgICAkdGhpcy0+c2V0dGluZ1N0b3JhZ2UtPnNldCgnYXBwX25hbWUnLCAnUUNvZGUnKTsKICAgICAgICAkdGhpcy0+c2V0dGluZ1N0b3JhZ2UtPnNldCgnYXBwX25hbWUnLCAnUUNvZGUnKTsKCiAgICAgICAgJHRoaXMtPmFzc2VydERhdGFiYXNlSGFzKCdzZXR0aW5ncycsIFsnbmFtZScgPT4gJ2FwcF9uYW1lJywgJ3ZhbCcgPT4gJ1FDb2RlJ10pOwogICAgICAgICR0aGlzLT5hc3NlcnRDb3VudCgxLCAkdGhpcy0+c2V0dGluZ1N0b3JhZ2UtPmFsbCh0cnVlKSk7CgogICAgICAgICR0aGlzLT5zZXR0aW5nU3RvcmFnZS0+c2V0KCdlbWFpbF9uYW1lJywgJ1FDb2RlJyk7CiAgICAgICAgJHRoaXMtPmFzc2VydENvdW50KDIsICR0aGlzLT5zZXR0aW5nU3RvcmFnZS0+YWxsKHRydWUpKTsKICAgIH0KCiAgICAvKioKICAgICAqIGl0IHVwZGF0ZXMgZXhpc2l0aW5nIHNldHRpbmcgaWYgYWxyZWFkeSBleGlzdHMKICAgICAqCiAgICAgKi8KICAgIHB1YmxpYyBmdW5jdGlvbiB0ZXN0X2l0X3VwZGF0ZXNfZXhpc2l0aW5nX3NldHRpbmdfaWZfYWxyZWFkeV9leGlzdHMoKQogICAgewogICAgICAgICR0aGlzLT5zZXR0aW5nU3RvcmFnZS0+c2V0KCdhcHBfbmFtZScsICdRQ29kZScpOwogICAgICAgICR0aGlzLT5hc3NlcnREYXRhYmFzZUhhcygnc2V0dGluZ3MnLCBbJ25hbWUnID0+ICdhcHBfbmFtZScsICd2YWwnID0+ICdRQ29kZSddKTsKCiAgICAgICAgJHRoaXMtPnNldHRpbmdTdG9yYWdlLT5zZXQoJ2FwcF9uYW1lJywgJ1VwZGF0ZWQgUUNvZGUnKTsKCiAgICAgICAgJHRoaXMtPmFzc2VydERhdGFiYXNlSGFzKCdzZXR0aW5ncycsIFsnbmFtZScgPT4gJ2FwcF9uYW1lJywgJ3ZhbCcgPT4gJ1VwZGF0ZWQgUUNvZGUnXSk7CiAgICAgICAgJHRoaXMtPmFzc2VydEVxdWFscygnVXBkYXRlZCBRQ29kZScsICR0aGlzLT5zZXR0aW5nU3RvcmFnZS0+Z2V0KCdhcHBfbmFtZScpKTsKICAgIH0KCiAgICAvKioKICAgICAqIGl0IHJlbW92ZXMgYSBzZXR0aW5nIGZyb20gc3RvcmFnZQogICAgICoKICAgICAqLwogICAgcHVibGljIGZ1bmN0aW9uIHRlc3RfaXRfcmVtb3Zlc19hX3NldHRpbmdfZnJvbV9zdG9yYWdlKCkKICAgIHsKICAgICAgICAkdGhpcy0+c2V0dGluZ1N0b3JhZ2UtPnNldCgnYXBwX25hbWUnLCAnUUNvZGUnKTsKICAgICAgICAkdGhpcy0+YXNzZXJ0RGF0YWJhc2VIYXMoJ3NldHRpbmdzJywgWyduYW1lJyA9PiAnYXBwX25hbWUnLCAndmFsJyA9PiAnUUNvZGUnXSk7CiAgICAgICAgJHRoaXMtPmFzc2VydEVxdWFscygnUUNvZGUnLCAkdGhpcy0+c2V0dGluZ1N0b3JhZ2UtPmdldCgnYXBwX25hbWUnKSk7CgogICAgICAgICR0aGlzLT5zZXR0aW5nU3RvcmFnZS0+cmVtb3ZlKCdhcHBfbmFtZScpOwoKICAgICAgICAkdGhpcy0+YXNzZXJ0RGF0YWJhc2VNaXNzaW5nKCdzZXR0aW5ncycsIFsnbmFtZScgPT4gJ2FwcF9uYW1lJywgJ3ZhbCcgPT4gJ1FDb2RlJ10pOwogICAgICAgICR0aGlzLT5hc3NlcnROdWxsKCR0aGlzLT5zZXR0aW5nU3RvcmFnZS0+Z2V0KCdhcHBfbmFtZScpKTsKICAgIH0KCiAgICAvKioKICAgICAqIGl0IGdpdmVzIGRlZmF1bHQgdmFsdWUgaWYgbm90aGluZyBzZXR0aW5nIG5vdCBmb3VuZAogICAgICoKICAgICAqLwogICAgcHVibGljIGZ1bmN0aW9uIHRlc3RfaXRfZ2l2ZXNfZGVmYXVsdF92YWx1ZV9pZl9ub3RoaW5nX3NldHRpbmdfbm90X2ZvdW5kKCkKICAgIHsKICAgICAgICAkdGhpcy0+YXNzZXJ0RGF0YWJhc2VNaXNzaW5nKCdzZXR0aW5ncycsIFsnYXBwX25hbWUnID0+ICdRQ29kZSddKTsKCiAgICAgICAgJHRoaXMtPmFzc2VydEVxdWFscygKICAgICAgICAgICAgJ0RlZmF1bHQgQXBwIE5hbWUnLAogICAgICAgICAgICAkdGhpcy0+c2V0dGluZ1N0b3JhZ2UtPmdldCgnYXBwX25hbWUnLCAnRGVmYXVsdCBBcHAgTmFtZScpCiAgICAgICAgKTsKICAgIH0KCiAgICAvKioKICAgICAqIGl0IGdpdmVzIHlvdSBzYXZlZCBzZXR0aW5nIHZhbHVlCiAgICAgKgogICAgICovCiAgICBwdWJsaWMgZnVuY3Rpb24gdGVzdF9pdF9naXZlc195b3Vfc2F2ZWRfc2V0dGluZ192YWx1ZSgpCiAgICB7CiAgICAgICAgJHRoaXMtPnNldHRpbmdTdG9yYWdlLT5zZXQoJ2FwcF9uYW1lJywgJ1FDb2RlJyk7CgogICAgICAgICR0aGlzLT5hc3NlcnRFcXVhbHMoCiAgICAgICAgICAgICdRQ29kZScsCiAgICAgICAgICAgICR0aGlzLT5zZXR0aW5nU3RvcmFnZS0+Z2V0KCdhcHBfbmFtZScsICdEZWZhdWx0IEFwcCBOYW1lJykKICAgICAgICApOwoKICAgICAgICAvLyBjaGFuZ2UgdGhlIHNldHRpbmcKICAgICAgICAkdGhpcy0+c2V0dGluZ1N0b3JhZ2UtPnNldCgnYXBwX25hbWUnLCAnQ2hhbmdlZCBRQ29kZScpOwoKICAgICAgICAkdGhpcy0+YXNzZXJ0RXF1YWxzKAogICAgICAgICAgICAnQ2hhbmdlZCBRQ29kZScsCiAgICAgICAgICAgICR0aGlzLT5zZXR0aW5nU3RvcmFnZS0+Z2V0KCdhcHBfbmFtZScsICdEZWZhdWx0IEFwcCBOYW1lJykKICAgICAgICApOwogICAgfQoKICAgIC8qKgogICAgICogaXQgY2FuIGFkZCBtdWx0aXBsZSBzZXR0aW5ncyBpbiBpZiBtdWx0aSBhcnJheSBpcyBwYXNzZWQKICAgICAqCiAgICAgKi8KICAgIHB1YmxpYyBmdW5jdGlvbiB0ZXN0X2l0X2Nhbl9hZGRfbXVsdGlwbGVfc2V0dGluZ3NfaW5faWZfbXVsdGlfYXJyYXlfaXNfcGFzc2VkKCkKICAgIHsKICAgICAgICAkdGhpcy0+c2V0dGluZ1N0b3JhZ2UtPnNldChbCiAgICAgICAgICAgICdhcHBfbmFtZScgPT4gJ1FDb2RlJywKICAgICAgICAgICAgJ2FwcF9lbWFpbCcgPT4gJ2luZm9AZW1haWwuY29tJywKICAgICAgICAgICAgJ2FwcF90eXBlJyA9PiAnU2FhUycKICAgICAgICBdKTsKCiAgICAgICAgJHRoaXMtPmFzc2VydENvdW50KDMsICR0aGlzLT5zZXR0aW5nU3RvcmFnZS0+YWxsKCkpOwogICAgICAgICR0aGlzLT5hc3NlcnRFcXVhbHMoJ1FDb2RlJywgJHRoaXMtPnNldHRpbmdTdG9yYWdlLT5nZXQoJ2FwcF9uYW1lJykpOwogICAgICAgICR0aGlzLT5hc3NlcnRFcXVhbHMoJ2luZm9AZW1haWwuY29tJywgJHRoaXMtPnNldHRpbmdTdG9yYWdlLT5nZXQoJ2FwcF9lbWFpbCcpKTsKICAgICAgICAkdGhpcy0+YXNzZXJ0RXF1YWxzKCdTYWFTJywgJHRoaXMtPnNldHRpbmdTdG9yYWdlLT5nZXQoJ2FwcF90eXBlJykpOwogICAgfQoKICAgIC8qKgogICAgICogaXQgY2FuIHVzZSBoZWxwZXIgZnVuY3Rpb24gdG8gc2V0IGFuZCBnZXQgc2V0dGluZ3MKICAgICAqCiAgICAgKi8KICAgIHB1YmxpYyBmdW5jdGlvbiB0ZXN0X2l0X2Nhbl91c2VfaGVscGVyX2Z1bmN0aW9uX3RvX3NldF9hbmRfZ2V0X3NldHRpbmdzKCkKICAgIHsKICAgICAgICBzZXR0aW5ncygpLT5zZXQoJ2FwcF9uYW1lJywgJ0Nvb2wgQXBwJyk7CgogICAgICAgICR0aGlzLT5hc3NlcnRFcXVhbHMoJ0Nvb2wgQXBwJywgc2V0dGluZ3MoKS0+Z2V0KCdhcHBfbmFtZScpKTsKCiAgICAgICAgJHRoaXMtPmFzc2VydERhdGFiYXNlSGFzKCdzZXR0aW5ncycsIFsnbmFtZScgPT4gJ2FwcF9uYW1lJ10pOwogICAgfQoKICAgIC8qKgogICAgICogaXQgY2FuIGFjY2VzcyBzZXR0aW5nIHZpYSBmYWNhZGUKICAgICAqCiAgICAgKi8KICAgIHB1YmxpYyBmdW5jdGlvbiB0ZXN0X2l0X2Nhbl9hY2Nlc3Nfc2V0dGluZ192aWFfZmFjYWRlKCkKICAgIHsKICAgICAgICBcU2V0dGluZ3M6OnNldCgnYXBwX25hbWUnLCAnQ29vbCBBcHAnKTsKCiAgICAgICAgJHRoaXMtPmFzc2VydEVxdWFscygnQ29vbCBBcHAnLCBcU2V0dGluZ3M6OmdldCgnYXBwX25hbWUnKSk7CgogICAgICAgICR0aGlzLT5hc3NlcnREYXRhYmFzZUhhcygnc2V0dGluZ3MnLCBbJ25hbWUnID0+ICdhcHBfbmFtZSddKTsKICAgIH0KCiAgICAvKioKICAgICAqIGl0IGhhcyBhIGRlZmF1bHQgZ3JvdXAgbmFtZSBmb3Igc2V0dGluZ3MKICAgICAqCiAgICAgKi8KICAgIHB1YmxpYyBmdW5jdGlvbiB0ZXN0X2l0X2hhc19hX2RlZmF1bHRfZ3JvdXBfbmFtZV9mb3Jfc2V0dGluZ3MoKQogICAgewogICAgICAgIHNldHRpbmdzKCktPnNldCgnYXBwX25hbWUnLCAnQ29vbCBBcHAnKTsKCiAgICAgICAgJHRoaXMtPmFzc2VydERhdGFiYXNlSGFzKCdzZXR0aW5ncycsIFsKICAgICAgICAgICAgJ25hbWUnID0+ICdhcHBfbmFtZScsCiAgICAgICAgICAgICd2YWwnID0+ICdDb29sIEFwcCcsCiAgICAgICAgICAgICdncm91cCcgPT4gJ2RlZmF1bHQnCiAgICAgICAgXSk7CiAgICB9CgogICAgLyoqCiAgICAgKiBpdCBjYW4gc3RvcmUgc2V0dGluZyB3aXRoIGEgZ3JvdXAgbmFtZQogICAgICoKICAgICAqLwogICAgcHVibGljIGZ1bmN0aW9uIHRlc3RfaXRfY2FuX3N0b3JlX3NldHRpbmdfd2l0aF9hX2dyb3VwX25hbWUoKQogICAgewogICAgICAgIHNldHRpbmdzKCktPmdyb3VwKCdzZXQxJyktPnNldCgnYXBwX25hbWUnLCAnQ29vbCBBcHAnKTsKCiAgICAgICAgJHRoaXMtPmFzc2VydERhdGFiYXNlSGFzKCdzZXR0aW5ncycsIFsKICAgICAgICAgICAgJ25hbWUnID0+ICdhcHBfbmFtZScsCiAgICAgICAgICAgICd2YWwnID0+ICdDb29sIEFwcCcsCiAgICAgICAgICAgICdncm91cCcgPT4gJ3NldDEnCiAgICAgICAgXSk7CiAgICB9CgogICAgLyoqCiAgICAgKiBpdCBjYW4gZ2V0IHNldHRpbmcgZnJvbSBhIGdyb3VwCiAgICAgKgogICAgICovCiAgICBwdWJsaWMgZnVuY3Rpb24gdGVzdF9pdF9jYW5fZ2V0X3NldHRpbmdfZnJvbV9hX2dyb3VwKCkKICAgIHsKICAgICAgICBzZXR0aW5ncygpLT5ncm91cCgnc2V0MScpLT5zZXQoJ2FwcF9uYW1lJywgJ0Nvb2wgQXBwJyk7CgogICAgICAgICR0aGlzLT5hc3NlcnRUcnVlKHNldHRpbmdzKCktPmdyb3VwKCdzZXQxJyktPmhhcygnYXBwX25hbWUnKSk7CiAgICAgICAgJHRoaXMtPmFzc2VydEVxdWFscygnQ29vbCBBcHAnLCBzZXR0aW5ncygpLT5ncm91cCgnc2V0MScpLT5nZXQoJ2FwcF9uYW1lJykpOwogICAgICAgICR0aGlzLT5hc3NlcnRGYWxzZShzZXR0aW5ncygpLT5ncm91cCgnc2V0MicpLT5oYXMoJ2FwcF9uYW1lJykpOwogICAgfQoKICAgIC8qKgogICAgICogaXQgZ2l2ZSB5b3UgYWxsIHNldHRpbmdzIGZyb20gZGVmYXVsdCBncm91cCBpZiB5b3UgZG9udCBzcGVjaWZ5IG9uZQogICAgICoKICAgICAqLwogICAgcHVibGljIGZ1bmN0aW9uIHRlc3RfaXRfZ2l2ZV95b3VfYWxsX3NldHRpbmdzX2Zyb21fZGVmYXVsdF9ncm91cF9pZl95b3VfZG9udF9zcGVjaWZ5X29uZSgpCiAgICB7CiAgICAgICAgc2V0dGluZ3MoKS0+c2V0KCdhcHBfbmFtZScsICdDb29sIEFwcCAxJyk7CiAgICAgICAgc2V0dGluZ3MoKS0+c2V0KCdhcHBfbmFtZScsICdDb29sIEFwcCAyJyk7CgogICAgICAgICR0aGlzLT5hc3NlcnRDb3VudCgxLCBzZXR0aW5ncygpLT5hbGwodHJ1ZSkpOwogICAgICAgICR0aGlzLT5hc3NlcnRDb3VudCgwLCBzZXR0aW5ncygpLT5ncm91cCgndW5rbm93bicpLT5hbGwodHJ1ZSkpOwogICAgfQoKICAgIC8qKgogICAgICogaXQgYWxsb3dzIHNhbWUga2V5IHRvIGJlIHVzZWQgaW4gZGlmZmVyZW50IGdyb3VwcwogICAgICoKICAgICAqLwogICAgcHVibGljIGZ1bmN0aW9uIHRlc3RfaXRfYWxsb3dzX3NhbWVfa2V5X3RvX2JlX3VzZWRfaW5fZGlmZmVyZW50X2dyb3VwcygpCiAgICB7CiAgICAgICAgc2V0dGluZ3MoKS0+Z3JvdXAoJ3RlYW0xJyktPnNldCgnYXBwX25hbWUnLCAnQ29vbCBBcHAgMScpOwogICAgICAgIHNldHRpbmdzKCktPmdyb3VwKCd0ZWFtMicpLT5zZXQoJ2FwcF9uYW1lJywgJ0Nvb2wgQXBwIDInKTsKCiAgICAgICAgJHRoaXMtPmFzc2VydENvdW50KDIsIFNldHRpbmc6OmFsbCgpKTsKICAgICAgICAkdGhpcy0+YXNzZXJ0RXF1YWxzKCdDb29sIEFwcCAxJywgc2V0dGluZ3MoKS0+Z3JvdXAoJ3RlYW0xJyktPmdldCgnYXBwX25hbWUnKSk7CiAgICAgICAgJHRoaXMtPmFzc2VydEVxdWFscygnQ29vbCBBcHAgMicsIHNldHRpbmdzKCktPmdyb3VwKCd0ZWFtMicpLT5nZXQoJ2FwcF9uYW1lJykpOwogICAgfQoKICAgIC8qKgogICAgICogaXQgZ2V0IGdyb3VwIHNldHRpbmdzIHVzaW5nIGZhY2FkZQogICAgICoKICAgICAqLwogICAgcHVibGljIGZ1bmN0aW9uIHRlc3RfaXRfZ2V0X2dyb3VwX3NldHRpbmdzX3VzaW5nX2ZhY2FkZSgpCiAgICB7CiAgICAgICAgXFNldHRpbmdzOjpncm91cCgndGVhbTEnKS0+c2V0KCdhcHBfbmFtZScsICdDb29sIEFwcCcpOwoKICAgICAgICAkdGhpcy0+YXNzZXJ0RXF1YWxzKCdDb29sIEFwcCcsIFxTZXR0aW5nczo6Z3JvdXAoJ3RlYW0xJyktPmdldCgnYXBwX25hbWUnKSk7CgogICAgICAgICR0aGlzLT5hc3NlcnREYXRhYmFzZUhhcygnc2V0dGluZ3MnLCBbJ25hbWUnID0+ICdhcHBfbmFtZScsICdncm91cCcgPT4gJ3RlYW0xJ10pOwogICAgfQp9Cg==
+<?php
+
+namespace QCod\Settings\Tests\Feature;
+
+use QCod\Settings\Tests\TestCase;
+use QCod\Settings\Setting\Setting;
+use QCod\Settings\Setting\SettingEloquentStorage;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+
+class StorageTest extends TestCase
+{
+    use RefreshDatabase;
+
+    /**
+     * @var SettingEloquentStorage
+     */
+    protected $settingStorage;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->settingStorage = new SettingEloquentStorage();
+    }
+
+    /**
+     * it sets a new key value in store
+     *
+     */
+    public function test_it_sets_a_new_key_value_in_store()
+    {
+        $this->assertDatabaseMissing('settings', ['app_name' => 'QCode']);
+
+        $this->settingStorage->set('app_name', 'QCode');
+
+        $this->assertDatabaseHas('settings', ['name' => 'app_name', 'val' => 'QCode']);
+    }
+
+    /**
+     * it dont set if same key value pair exists in store
+     *
+     */
+    public function test_it_dont_set_if_same_key_value_pair_exists_in_store()
+    {
+        $this->assertDatabaseMissing('settings', ['app_name' => 'QCode']);
+
+        $this->settingStorage->set('app_name', 'QCode');
+        $this->settingStorage->set('app_name', 'QCode');
+
+        $this->assertDatabaseHas('settings', ['name' => 'app_name', 'val' => 'QCode']);
+        $this->assertCount(1, $this->settingStorage->all(true));
+
+        $this->settingStorage->set('email_name', 'QCode');
+        $this->assertCount(2, $this->settingStorage->all(true));
+    }
+
+    /**
+     * it updates exisiting setting if already exists
+     *
+     */
+    public function test_it_updates_exisiting_setting_if_already_exists()
+    {
+        $this->settingStorage->set('app_name', 'QCode');
+        $this->assertDatabaseHas('settings', ['name' => 'app_name', 'val' => 'QCode']);
+
+        $this->settingStorage->set('app_name', 'Updated QCode');
+
+        $this->assertDatabaseHas('settings', ['name' => 'app_name', 'val' => 'Updated QCode']);
+        $this->assertEquals('Updated QCode', $this->settingStorage->get('app_name'));
+    }
+
+    /**
+     * it removes a setting from storage
+     *
+     */
+    public function test_it_removes_a_setting_from_storage()
+    {
+        $this->settingStorage->set('app_name', 'QCode');
+        $this->assertDatabaseHas('settings', ['name' => 'app_name', 'val' => 'QCode']);
+        $this->assertEquals('QCode', $this->settingStorage->get('app_name'));
+
+        $this->settingStorage->remove('app_name');
+
+        $this->assertDatabaseMissing('settings', ['name' => 'app_name', 'val' => 'QCode']);
+        $this->assertNull($this->settingStorage->get('app_name'));
+    }
+
+    /**
+     * it gives default value if nothing setting not found
+     *
+     */
+    public function test_it_gives_default_value_if_nothing_setting_not_found()
+    {
+        $this->assertDatabaseMissing('settings', ['app_name' => 'QCode']);
+
+        $this->assertEquals(
+            'Default App Name',
+            $this->settingStorage->get('app_name', 'Default App Name')
+        );
+    }
+
+    /**
+     * it gives you saved setting value
+     *
+     */
+    public function test_it_gives_you_saved_setting_value()
+    {
+        $this->settingStorage->set('app_name', 'QCode');
+
+        $this->assertEquals(
+            'QCode',
+            $this->settingStorage->get('app_name', 'Default App Name')
+        );
+
+        // change the setting
+        $this->settingStorage->set('app_name', 'Changed QCode');
+
+        $this->assertEquals(
+            'Changed QCode',
+            $this->settingStorage->get('app_name', 'Default App Name')
+        );
+    }
+
+    /**
+     * it can add multiple settings in if multi array is passed
+     *
+     */
+    public function test_it_can_add_multiple_settings_in_if_multi_array_is_passed()
+    {
+        $this->settingStorage->set([
+            'app_name' => 'QCode',
+            'app_email' => 'info@email.com',
+            'app_type' => 'SaaS'
+        ]);
+
+        $this->assertCount(3, $this->settingStorage->all());
+        $this->assertEquals('QCode', $this->settingStorage->get('app_name'));
+        $this->assertEquals('info@email.com', $this->settingStorage->get('app_email'));
+        $this->assertEquals('SaaS', $this->settingStorage->get('app_type'));
+    }
+
+    /**
+     * it can use helper function to set and get settings
+     *
+     */
+    public function test_it_can_use_helper_function_to_set_and_get_settings()
+    {
+        settings()->set('app_name', 'Cool App');
+
+        $this->assertEquals('Cool App', settings()->get('app_name'));
+
+        $this->assertDatabaseHas('settings', ['name' => 'app_name']);
+    }
+
+    /**
+     * it can access setting via facade
+     *
+     */
+    public function test_it_can_access_setting_via_facade()
+    {
+        \Settings::set('app_name', 'Cool App');
+
+        $this->assertEquals('Cool App', \Settings::get('app_name'));
+
+        $this->assertDatabaseHas('settings', ['name' => 'app_name']);
+    }
+
+    /**
+     * it has a default group name for settings
+     *
+     */
+    public function test_it_has_a_default_group_name_for_settings()
+    {
+        settings()->set('app_name', 'Cool App');
+
+        $this->assertDatabaseHas('settings', [
+            'name' => 'app_name',
+            'val' => 'Cool App',
+            'group' => 'default'
+        ]);
+    }
+
+    /**
+     * it can store setting with a group name
+     *
+     */
+    public function test_it_can_store_setting_with_a_group_name()
+    {
+        settings()->group('set1')->set('app_name', 'Cool App');
+
+        $this->assertDatabaseHas('settings', [
+            'name' => 'app_name',
+            'val' => 'Cool App',
+            'group' => 'set1'
+        ]);
+    }
+
+    /**
+     * it can get setting from a group
+     *
+     */
+    public function test_it_can_get_setting_from_a_group()
+    {
+        settings()->group('set1')->set('app_name', 'Cool App');
+
+        $this->assertTrue(settings()->group('set1')->has('app_name'));
+        $this->assertEquals('Cool App', settings()->group('set1')->get('app_name'));
+        $this->assertFalse(settings()->group('set2')->has('app_name'));
+    }
+
+    /**
+     * it give you all settings from default group if you dont specify one
+     *
+     */
+    public function test_it_give_you_all_settings_from_default_group_if_you_dont_specify_one()
+    {
+        settings()->set('app_name', 'Cool App 1');
+        settings()->set('app_name', 'Cool App 2');
+
+        $this->assertCount(1, settings()->all(true));
+        $this->assertCount(0, settings()->group('unknown')->all(true));
+    }
+
+    /**
+     * it allows same key to be used in different groups
+     *
+     */
+    public function test_it_allows_same_key_to_be_used_in_different_groups()
+    {
+        settings()->group('team1')->set('app_name', 'Cool App 1');
+        settings()->group('team2')->set('app_name', 'Cool App 2');
+
+        $this->assertCount(2, Setting::all());
+        $this->assertEquals('Cool App 1', settings()->group('team1')->get('app_name'));
+        $this->assertEquals('Cool App 2', settings()->group('team2')->get('app_name'));
+    }
+
+    /**
+     * it get group settings using facade
+     *
+     */
+    public function test_it_get_group_settings_using_facade()
+    {
+        \Settings::group('team1')->set('app_name', 'Cool App');
+
+        $this->assertEquals('Cool App', \Settings::group('team1')->get('app_name'));
+
+        $this->assertDatabaseHas('settings', ['name' => 'app_name', 'group' => 'team1']);
+    }
+}
