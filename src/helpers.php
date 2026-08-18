@@ -7,7 +7,7 @@ if (! function_exists('settings')) {
      *
      * @param $key
      * @param  null  $default
-     * @return mixed
+     * @return \QCod\Settings\Setting\SettingStorage|mixed
      */
     function settings($key = null, $default = null)
     {
