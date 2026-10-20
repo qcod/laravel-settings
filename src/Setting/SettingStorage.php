@@ -27,7 +27,7 @@ interface SettingStorage
     /**
      * Check if setting with key exists.
      *
-     * @param $key
+     * @param  $key
      * @return bool
      */
     public function has($key);
@@ -35,8 +35,8 @@ interface SettingStorage
     /**
      * Save a setting in storage.
      *
-     * @param $key string|array
-     * @param $val string|mixed
+     * @param  $key  string|array
+     * @param  $val  string|mixed
      * @return mixed
      */
     public function set($key, $val = null);
@@ -44,7 +44,7 @@ interface SettingStorage
     /**
      * Remove a setting from storage.
      *
-     * @param $key
+     * @param  $key
      * @return mixed
      */
     public function remove($key);

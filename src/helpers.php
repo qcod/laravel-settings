@@ -1,11 +1,10 @@
 <?php
 
 if (! function_exists('settings')) {
-
     /**
      * Get app setting stored in db.
      *
-     * @param $key
+     * @param  $key
      * @param  null  $default
      * @return mixed
      */
