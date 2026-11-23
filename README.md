@@ -10,6 +10,13 @@ Use `qcod/laravel-settings` to store key value pair settings in the database.
 
 > All the settings saved in db is cached to improve performance by reducing sql query to zero.
 
+### Requirements
+
+- Laravel 12: PHP 8.2 - 8.5
+- Laravel 13: PHP 8.3 - 8.5
+
+Older Laravel versions remain available through the package's Composer constraints.
+
 ### Installation
 
 **1** - You can install the package via composer:
@@ -18,23 +25,7 @@ Use `qcod/laravel-settings` to store key value pair settings in the database.
 $ composer require qcod/laravel-settings
 ```
 
-**2** - If you are installing on Laravel 5.4 or lower you will be needed to manually register Service Provider by adding it in `config/app.php` providers array and Facade in aliases arrays.
-
-```php
-'providers' => [
-    //...
-    QCod\Settings\SettingsServiceProvider::class
-]
-
-'aliases' => [
-    //...
-    "Settings" => QCod\Settings\Facade::class
-]
-```
-
-In Laravel 5.5 or above the service provider automatically get registered and a facade `Setting::get('app_name')` will be available.
-
-**3** - Now run the migration by `php artisan migrate` to create the settings table.
+**2** - The service provider is automatically registered and a facade `Setting::get('app_name')` will be available. Run the migration with `php artisan migrate` to create the settings table.
 
 Optionally you can publish migration by running
 
